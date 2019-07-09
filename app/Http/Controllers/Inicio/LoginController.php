@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Inicio;
 use App\Http\Controllers\Controller;
 use Auth;
+//use App\Usuario;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -26,17 +27,19 @@ class LoginController extends Controller
             'usuario_nombre'=> $datos['nombre'],
             'usuario_apellido'=>$datos['apellido'],
             'usuario_telefono'=>$datos['telefono'],
-            'usuario_email'=> $datos['email'],        
+            'email'=> $datos['email'],        
             //'usuario_imagen'=>$datos['imagen'],
-            'usuario_password'=>bcrypt($datos['password']),
+            'password'=>bcrypt($datos['password']),
            // 'usuario_estado'=>$datos['estado'], 
-            'rol_id'=>$datos['rolId']
+            'rol_id'=>$datos['rolId'],
+
 
         ]);   
-         return redirect('login'); 
+         return redirect('example');
+
 
 	}
-
+/*
 	public function login(){
 	 $credentials = $this->validate(request(),[
 			'email'=>'email|required|string|max:300',
@@ -50,6 +53,11 @@ class LoginController extends Controller
 	}
 
 	}
+*/
 
+	public function login(){
+
+		return view('InicioViews.login');
+	}
 
 }

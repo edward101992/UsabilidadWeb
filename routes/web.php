@@ -15,11 +15,28 @@ Route::get('/', function () {
     return view('InicioViews.login');
 });
 
+
 Route::post('/registroNuevo','Inicio\LoginController@registroNuevo');
 Route::get('/registro','Inicio\LoginController@registro');
 
 
 Route::get('/example','Inicio\LoginController@example')->name('example');
 
-Route::post('/login','Inicio\LoginController@login')->name('login');
+Route::post('/login2','Inicio\LoginController@login')->name('login2');
 
+
+
+Auth::routes();
+// Authentication Routes...
+// Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
+// Route::post('login', 'Auth\LoginController@login');
+// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// // Registration Routes...
+// if ($options['register'] ?? true) {
+//     Route::get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+//     Route::post('register', 'Auth\RegisterController@register');
+// }
+
+
+ Route::get('/home', 'HomeController@index')->name('home');
