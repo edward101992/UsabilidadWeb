@@ -12,5 +12,14 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('InicioViews.login');
 });
+
+Route::post('/registroNuevo','Inicio\LoginController@registroNuevo');
+Route::get('/registro','Inicio\LoginController@registro');
+
+
+Route::get('/example','Inicio\LoginController@example')->name('example');
+
+Route::post('/login','Inicio\LoginController@login')->name('login');
+
