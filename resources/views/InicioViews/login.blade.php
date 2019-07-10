@@ -60,7 +60,8 @@ License: You must have a valid license purchased only from themeforest(the above
                         <p> Plataforma web para medir la Usabilidad de Aplicaciones Web </p>
 
                        
-                        <form action="{{ url('login') }}" class="login-form" method="POST" >
+                        <form class="login-form" method="POST" action="{{ route('login') }}">
+                           
                             {{ csrf_field() }}
 
                             <div class="alert alert-danger display-hide">
