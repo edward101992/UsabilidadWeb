@@ -34,7 +34,8 @@ class LoginController extends Controller
             'rol_id'=>$datos['rolId'],
 
 
-        ]);   
+        ]);  
+        //retorna la vista si se registro ...quitar por mensaje 
          return redirect('example');
 
 
