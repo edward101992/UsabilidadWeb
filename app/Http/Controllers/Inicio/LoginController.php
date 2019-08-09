@@ -7,7 +7,9 @@ use Auth;
 use App\User;
 use Illuminate\Http\Request;
 
-
+//// Prueba para git kraken
+///
+///
 class LoginController extends Controller
 {
     
